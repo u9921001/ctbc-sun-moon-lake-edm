@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 日月潭環湖馬拉松大會師 | 活動說明</title>
+    <!-- 引入 Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入 FontAwesome 圖示 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            green: '#005A40', 
+                            lightgreen: '#007A5E',
+                            gold: '#F39C12',
+                            goldhover: '#D68910',
+                            bg: '#F4F6F8'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"PingFang TC"', '"Microsoft JhengHei"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'PingFang TC', 'Microsoft JhengHei', sans-serif; background-color: #F4F6F8; }
+        .glass-card { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        /* 圖片放大模態框過渡效果 */
+        #imageModal.show { opacity: 1; visibility: visible; }
+        #imageModal { opacity: 0; visibility: hidden; transition: opacity 0.3s ease, visibility 0.3s ease; }
+        #modalImage.scale-up { transform: scale(1); }
+        #modalImage { transform: scale(0.95); transition: transform 0.3s ease; }
+    </style>
+</head>
+<body class="text-gray-800 antialiased relative">
+
+    <!-- 1. Header -->
+    <header class="fixed w-full top-0 z-50 glass-card shadow-sm border-b border-gray-100">
+        <div class="container mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-brand-green rounded-full flex items-center justify-center text-white font-bold">
+                    <i class="fa-solid fa-running"></i>
+                </div>
+                <span class="text-xl font-bold text-brand-green tracking-wide truncate">中國信託台北路跑健走社｜CTBC RC</span>
+            </div>
+            <nav class="hidden md:flex gap-6 font-medium text-gray-600">
+                <a href="#itinerary" class="hover:text-brand-green transition-colors">活動行程</a>
+                <a href="#rules" class="hover:text-brand-green transition-colors">賽事說明</a>
+                <a href="#lists" class="hover:text-brand-green transition-colors">分組名單</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 2. Hero Banner -->
+    <section class="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden bg-brand-green text-white">
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-brand-lightgreen rounded-full blur-3xl opacity-50"></div>
+        <div class="container mx-auto px-4 md:px-6 relative z-10 text-center">
+            <span class="inline-block py-1 px-4 rounded-full bg-white/20 border border-white/30 text-sm font-semibold mb-4">
+                <i class="fa-solid fa-calendar-days mr-2 text-brand-gold"></i>10月31日(六) - 11月01日(日)
+            </span>
+            <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-6 text-white drop-shadow-md">
+                日月潭環湖馬拉松<span class="text-brand-gold">大會師</span>
+            </h1>
+            
+            <!-- 聯絡人資訊卡片 -->
+            <div class="flex flex-wrap justify-center gap-4 mt-8">
+                <div class="bg-white/10 border border-white/20 rounded-xl p-4 flex items-center gap-4 backdrop-blur-sm">
+                    <div class="w-10 h-10 bg-brand-gold rounded-full flex items-center justify-center text-white"><i class="fa-solid fa-person text-xl"></i></div>
+                    <div class="text-left">
+                        <div class="text-xs text-gray-300">社團總幹事</div>
+                        <div class="font-bold">林科宏 Nick <span class="text-sm font-normal ml-1">0930-390-189</span></div>
+                    </div>
+                </div>
+                <div class="bg-white/10 border border-white/20 rounded-xl p-4 flex items-center gap-4 backdrop-blur-sm">
+                    <div class="w-10 h-10 bg-brand-gold rounded-full flex items-center justify-center text-white"><i class="fa-solid fa-person-dress text-xl"></i></div>
+                    <div class="text-left">
+                        <div class="text-xs text-gray-300">遊覽車車長</div>
+                        <div class="font-bold">鄭淳芬 Ruby <span class="text-sm font-normal ml-1">0978-521-606</span></div>
+                    </div>
+                </div>
+                <div class="bg-white/10 border border-white/20 rounded-xl p-4 flex items-center gap-4 backdrop-blur-sm">
+                    <div class="w-10 h-10 bg-brand-gold rounded-full flex items-center justify-center text-white"><i class="fa-solid fa-person text-xl"></i></div>
+                    <div class="text-left">
+                        <div class="text-xs text-gray-300">活動長</div>
+                        <div class="font-bold">吳聖泰 Max <span class="text-sm font-normal ml-1">0921-237-762</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. 行程規劃 (Itinerary) -->
+    <section id="itinerary" class="py-16 bg-white">
+        <div class="container mx-auto px-4 md:px-6 max-w-5xl">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-brand-green mb-3">行程表</h2>
+                <p class="text-gray-500">兩天一夜完整規劃</p>
+            </div>
+
+            <!-- 強調的 29K 重要提醒 -->
+            <div class="bg-red-50 border-l-[6px] border-red-500 p-6 rounded-r-xl mb-12 shadow-md relative overflow-hidden">
+                <div class="absolute -right-4 -top-4 text-red-100 opacity-50"><i class="fa-solid fa-triangle-exclamation text-8xl"></i></div>
+                <h4 class="font-extrabold text-red-600 flex items-center mb-3 text-xl relative z-10">
+                    <i class="fa-solid fa-triangle-exclamation mr-2 animate-pulse"></i> 29K 參賽者重要提醒
+                </h4>
+                <p class="text-base text-gray-800 font-medium leading-loose relative z-10">
+                    <mark class="bg-yellow-200 px-2 py-1 rounded font-bold">如完賽時間會超過4小時（配速8分16秒），建議早上 05:10 先將行李寄放大廳及退房。</mark><br>
+                    另考量部分29K參賽者會較晚完賽，將預留2間4人房提供盥洗，<strong class="text-red-600 underline">最晚13:00退房</strong>（視情況增加房間）。
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <!-- DAY 1 -->
+                <div class="bg-gray-50 rounded-2xl p-6 shadow-sm border border-gray-100">
+                    <h3 class="text-2xl font-bold text-brand-green mb-6 border-b pb-4">10/31 (六) DAY 1</h3>
+                    <ul class="space-y-5 relative border-l-2 border-brand-green/30 ml-3">
+                        <li class="pl-6 relative">
+                            <div class="absolute w-3 h-3 bg-brand-green rounded-full -left-[7px] top-1.5"></div>
+                            <div class="font-bold text-brand-green">08:00 - 08:30</div>
+                            <div class="text-gray-700">中信總行集合，拿取早餐<br><span class="text-sm text-gray-500">南港區經貿路二段168號</span></div>
+                        </li>
+                        <li class="pl-6 relative">
+                            <div class="absolute w-3 h-3 bg-gray-300 rounded-full -left-[7px] top-1.5"></div>
+                            <div class="font-bold text-gray-700">08:30 - 12:00</div>
+                            <div class="text-gray-600">國道風光 (依照車況停休息站)</div>
+                        </li>
+                        <li class="pl-6 relative">
+                            <div class="absolute w-3 h-3 bg-gray-300 rounded-full -left-[7px] top-1.5"></div>
+                            <div class="font-bold text-gray-700">12:00 - 12:30</div>
+                            <div class="text-gray-600">日月潭教師會館 (寄放行李)</div>
+                        </li>
+                        <li class="pl-6 relative">
+                            <div class="absolute w-3 h-3 bg-brand-gold rounded-full -left-[7px] top-1.5"></div>
+                            <div class="font-bold text-brand-gold">12:30 - 17:30</div>
+                            <div class="text-gray-700 font-semibold">自由活動 (15:00後辦理 Check in)</div>
+                            <div class="mt-2 p-3 bg-white rounded-lg text-sm text-gray-600 border border-gray-200 shadow-sm">
+                                <span class="font-bold text-brand-green">推薦行程：</span><br>
+                                1. 日月潭單車 (水社出發)。<br>
+                                2. 日月潭遊湖 (水社出發 > 伊達邵 > 玄光寺)。
+                            </div>
+                        </li>
+                        <li class="pl-6 relative">
+                            <div class="absolute w-3 h-3 bg-gray-300 rounded-full -left-[7px] top-1.5"></div>
+                            <div class="font-bold text-gray-700">18:00 - 19:30</div>
+                            <div class="text-gray-600">晚餐時間 (教師會館)</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- DAY 2 -->
+                <div class="bg-gray-50 rounded-2xl p-6 shadow-sm border border-gray-100">
+                    <h3 class="text-2xl font-bold text-brand-green mb-6 border-b pb-4">11/01 (日) DAY 2</h3>
+                    <ul class="space-y-5 relative border-l-2 border-brand-green/30 ml-3">
+                        <li class="pl-6 relative">
+                            <div class="absolute w-3 h-3 bg-brand-gold rounded-full -left-[7px] top-1.5"></div>
+                            <div class="font-bold text-brand-gold">05:00 - 05:10</div>
+                            <div class="text-gray-700 font-bold">參加環湖賽事人員（共42位）於飯店大廳集合</div>
+                        </li>
+                        <li class="pl-6 relative">
+                            <div class="absolute w-3 h-3 bg-gray-300 rounded-full -left-[7px] top-1.5"></div>
+                            <div class="font-bold text-gray-700">05:10 - 05:40</div>
+                            <div class="text-gray-600">參賽者搭乘遊覽車前往會場</div>
+                        </li>
+                        <li class="pl-6 relative">
+                            <div class="absolute w-3 h-3 bg-gray-300 rounded-full -left-[7px] top-1.5"></div>
+                            <div class="font-bold text-gray-700">07:00 - 09:30</div>
+                            <div class="text-gray-600">未參加賽事及報名6K者於飯店內享用早餐<br><span class="text-sm text-brand-green font-bold">29K 飯店將提供餐盒</span></div>
+                        </li>
+                        <li class="pl-6 relative">
+                            <div class="absolute w-3 h-3 bg-brand-gold rounded-full -left-[7px] top-1.5"></div>
+                            <div class="font-bold text-brand-gold">12:00</div>
+                            <!-- 退房文字更新 -->
+                            <div class="text-gray-700 font-bold flex items-center">
+                                退房
+                                <span class="text-sm font-normal text-brand-green ml-2 bg-green-50 px-2 py-0.5 rounded border border-green-100">
+                                    <i class="fa-solid fa-suitcase-rolling mr-1"></i>請將行李寄放給飯店
+                                </span>
+                            </div>
+                        </li>
+                        <li class="pl-6 relative">
+                            <div class="absolute w-3 h-3 bg-gray-300 rounded-full -left-[7px] top-1.5"></div>
+                            <div class="font-bold text-gray-700">12:00 - 14:00</div>
+                            <div class="text-gray-600">午餐時間 (碼啡館 - 自行前往)</div>
+                        </li>
+                        <li class="pl-6 relative">
+                            <div class="absolute w-3 h-3 bg-brand-green rounded-full -left-[7px] top-1.5"></div>
+                            <div class="font-bold text-brand-green">14:50 - 15:00</div>
+                            <div class="text-gray-700 font-bold">教師會館集合準備返程</div>
+                        </li>
+                        <li class="pl-6 relative">
+                            <div class="absolute w-3 h-3 bg-gray-300 rounded-full -left-[7px] top-1.5"></div>
+                            <div class="font-bold text-gray-700">15:00 - 19:00</div>
+                            <div class="text-gray-600">國道風光，抵達中信南港總行</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- LINE 群組公告提醒 -->
+            <div class="mt-8 mx-auto bg-[#00B900]/10 border-2 border-[#00B900]/30 rounded-xl p-5 text-center shadow-sm">
+                <p class="text-[#00B900] font-bold md:text-lg flex flex-col md:flex-row items-center justify-center">
+                    <i class="fa-brands fa-line text-3xl md:text-2xl mb-2 md:mb-0 md:mr-3"></i> 
+                    若行程有任何變動，將第一時間於 LINE 群組公告，敬請密切留意。
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 4. 賽事說明與規定 (Rules & Info) -->
+    <section id="rules" class="py-16 bg-brand-bg">
+        <div class="container mx-auto px-4 md:px-6 max-w-6xl">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-brand-green mb-3">大會賽事說明</h2>
+                <p class="text-gray-500 mb-6">活動會場、路線規定與寄物須知</p>
+                <!-- 大會簡章連結按鈕 -->
+                <a href="https://irunner.biji.co/sunmoonlakemarathon2026" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-brand-gold hover:bg-brand-goldhover text-white px-6 py-2.5 rounded-full font-bold shadow-md transition-all transform hover:scale-105">
+                    <i class="fa-solid fa-link mr-2"></i> 前往大會官方簡章
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-10">
+                <!-- 大會時間 -->
+                <div class="lg:col-span-1 bg-brand-green text-white rounded-2xl p-6 shadow-lg h-full flex flex-col">
+                    <h3 class="text-xl font-bold text-brand-gold mb-6 border-b border-white/20 pb-3 flex items-center">
+                        <i class="fa-solid fa-clock mr-2"></i>賽事時刻表
+                    </h3>
+                    <div class="space-y-4 flex-grow">
+                        <div class="flex justify-between"><span>06:00 - 06:10</span> <span>大會集合</span></div>
+                        <div class="flex justify-between"><span>06:10 - 06:25</span> <span>開幕典禮</span></div>
+                        <div class="flex justify-between font-bold text-brand-gold"><span class="text-white">06:30</span> <span>42K 全馬出發</span></div>
+                        <div class="flex justify-between font-bold text-brand-gold"><span class="text-white">06:35</span> <span>29K 超半馬出發</span></div>
+                        <div class="flex justify-between font-bold text-brand-gold"><span class="text-white">06:40</span> <span>6K 健走出發</span></div>
+                    </div>
+                    
+                    <!-- 極度強調的賽後接駁說明 -->
+                    <div class="mt-6 p-5 bg-gradient-to-r from-yellow-300 to-yellow-500 rounded-xl shadow-lg relative overflow-hidden text-gray-900 border-2 border-yellow-200">
+                        <div class="absolute -right-2 -bottom-4 text-yellow-600 opacity-20"><i class="fa-solid fa-bus text-8xl"></i></div>
+                        <strong class="block mb-3 text-lg font-extrabold flex items-center relative z-10 text-gray-900">
+                            <i class="fa-solid fa-bullhorn mr-2 animate-pulse text-red-600 text-xl"></i> 賽後返回飯店須知
+                        </strong>
+                        <div class="relative z-10 space-y-3">
+                            <p class="leading-relaxed font-bold bg-white/90 p-3 rounded-lg text-[15px] shadow-sm text-gray-800">
+                                參賽者完賽後，請搭乘大會接駁車返回「水社遊客中心」，隨後步行前往「教師會館」飯店。
+                            </p>
+                            <div class="bg-yellow-900/10 p-3 rounded-lg border border-yellow-600/20">
+                                <ul class="list-disc pl-4 space-y-2 font-bold text-[14px]">
+                                    <!-- 移除白底邊框，改為純紅字加粗 -->
+                                    <li>向山遊客中心至水社，<span class="text-red-600 font-extrabold text-base">09:00 起發車</span>，憑號碼布上車。</li>
+                                    <li>預估每隔10分鐘發車，至 <span class="text-red-600 font-extrabold text-base">13:30 止 (末班車)</span>。</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 晶片與寄物規定 -->
+                <div class="lg:col-span-2 bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
+                    <h3 class="text-xl font-bold text-brand-green mb-6 border-b border-gray-100 pb-3">晶片與衣物保管規定</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-gray-700 leading-relaxed">
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-3 flex items-center text-base"><i class="fa-solid fa-stopwatch text-brand-gold mr-2 text-lg"></i> 晶片與成績領取</h4>
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li><strong>42K 及 29K 設有計時晶片</strong>（6K組無晶片）。</li>
+                                <li>通過晶片感應地墊時，請勿停止跑步，並留意通過每個感應點。</li>
+                                <li>晶片請勿折疊，緊繫於鞋帶上（靠近鞋尖位置）。</li>
+                                <li>晶片為單次拋棄式，不需歸還。未依規定配戴將不予計時。</li>
+                                <li><strong class="text-red-500">本賽事現場無成績列印</strong>，請直接掃描號碼布上的 QR code 取得電子證書。</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-3 flex items-center text-base"><i class="fa-solid fa-bag-shopping text-brand-gold mr-2 text-lg"></i> 衣物寄放規則</h4>
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li>請務必將衣物裝入<strong>「路跑專用寄物袋」</strong>，未裝入者大會恕不受理寄物。</li>
+                                <li><strong class="text-red-500">不接受：束口袋、一般購物袋、後背包。</strong></li>
+                                <li>寄物時請依照號碼布編號<strong>「最後一碼」</strong>數字，至相對應的帳篷辦理。（例如：編號12345 請至5號帳棚）。</li>
+                                <li>貴重物品、電子產品、易碎品等請自行保管，遺失恕不負責。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 路線、會場與高度圖 (加入點擊放大功能) -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- 1. 賽事會場佈置圖 -->
+                <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between hover:shadow-lg transition">
+                    <h4 class="font-bold text-center text-gray-800 mb-4 border-b pb-2">活動會場配置圖</h4>
+                    <div class="relative group cursor-pointer overflow-hidden rounded mt-auto" onclick="openImageModal('./image_a9e01c.jpg')">
+                        <img src="./image_a9e01c.jpg" alt="活動會場配置圖" class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <span class="bg-brand-green text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg backdrop-blur-sm"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i> 點擊放大</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 2. 賽道路線圖 -->
+                <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between hover:shadow-lg transition">
+                    <h4 class="font-bold text-center text-gray-800 mb-4 border-b pb-2">賽道路線圖</h4>
+                    <div class="relative group cursor-pointer overflow-hidden rounded mt-auto" onclick="openImageModal('./image_a9e03c.jpg')">
+                        <img src="./image_a9e03c.jpg" alt="賽道路線圖" class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <span class="bg-brand-green text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg backdrop-blur-sm"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i> 點擊放大</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 3. 路線高度表 -->
+                <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between hover:shadow-lg transition">
+                    <h4 class="font-bold text-center text-gray-800 mb-4 border-b pb-2">29K 路線高度表</h4>
+                    <div class="relative group cursor-pointer overflow-hidden rounded mt-auto" onclick="openImageModal('./image_a9e07a.png')">
+                        <img src="./image_a9e07a.png" alt="29K 路線高度表" class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <span class="bg-brand-green text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg backdrop-blur-sm"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i> 點擊放大</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 29K 完賽配速對照表 -->
+            <div class="mt-10 bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100 max-w-3xl mx-auto">
+                <h3 class="text-xl font-bold text-brand-green mb-6 border-b border-gray-100 pb-3 flex items-center justify-center">
+                    <i class="fa-solid fa-person-running text-brand-gold mr-2 text-xl"></i> 29K 完賽配速對照表
+                </h3>
+                <div class="overflow-x-auto hide-scrollbar">
+                    <table class="w-full text-sm text-center text-gray-600">
+                        <thead class="text-xs text-gray-500 bg-gray-50 border-b border-gray-200">
+                            <tr>
+                                <th scope="col" class="px-6 py-3 font-bold">完賽時間</th>
+                                <th scope="col" class="px-6 py-3 font-bold">平均配速（分/公里）</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50"><td class="px-6 py-3 font-bold text-gray-800">2:30:00</td><td class="px-6 py-3">05:10 / km</td></tr>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50"><td class="px-6 py-3 font-bold text-gray-800">2:40:00</td><td class="px-6 py-3">05:31 / km</td></tr>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50"><td class="px-6 py-3 font-bold text-gray-800">2:50:00</td><td class="px-6 py-3">05:52 / km</td></tr>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50"><td class="px-6 py-3 font-bold text-gray-800">3:00:00</td><td class="px-6 py-3">06:12 / km</td></tr>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50"><td class="px-6 py-3 font-bold text-gray-800">3:10:00</td><td class="px-6 py-3">06:33 / km</td></tr>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50"><td class="px-6 py-3 font-bold text-gray-800">3:20:00</td><td class="px-6 py-3">06:53 / km</td></tr>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50"><td class="px-6 py-3 font-bold text-gray-800">3:30:00</td><td class="px-6 py-3">07:14 / km</td></tr>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50"><td class="px-6 py-3 font-bold text-gray-800">3:40:00</td><td class="px-6 py-3">07:35 / km</td></tr>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50"><td class="px-6 py-3 font-bold text-gray-800">3:50:00</td><td class="px-6 py-3">07:55 / km</td></tr>
+                            <!-- 超過 4 小時特別標示 -->
+                            <tr class="border-b border-gray-100 bg-red-50 hover:bg-red-100 transition"><td class="px-6 py-3 font-bold text-red-700">4:00:00</td><td class="px-6 py-3 font-bold text-red-700">08:17 / km</td></tr>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50"><td class="px-6 py-3 font-bold text-gray-800">4:10:00</td><td class="px-6 py-3">08:37 / km</td></tr>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50"><td class="px-6 py-3 font-bold text-gray-800">4:20:00</td><td class="px-6 py-3">08:58 / km</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-6 py-3 font-bold text-gray-800">4:30:00</td><td class="px-6 py-3">09:18 / km</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 5. 各項分組名單 (Lists - 表格呈現版) -->
+    <section id="lists" class="py-16 bg-white">
+        <div class="container mx-auto px-4 md:px-6 max-w-6xl">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-brand-green mb-3">大會分組名單總覽</h2>
+                <p class="text-gray-500">乘車、用餐與住宿安排資訊</p>
+            </div>
+
+            <!-- A. 交通安排 (卡片 + 標籤) -->
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden mb-8">
+                <div class="bg-brand-green text-white px-6 py-4 flex items-center">
+                    <i class="fa-solid fa-bus-simple mr-3 text-brand-gold text-xl"></i>
+                    <h3 class="font-bold text-lg">交通乘車名單</h3>
+                </div>
+                <div class="p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- 遊覽車 -->
+                    <div class="md:col-span-2">
+                        <div class="text-sm text-gray-500 mb-2 border-b pb-1 font-bold">遊覽車 (共43人)</div>
+                        <div class="flex flex-wrap gap-2 text-sm">
+                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded">鄭淳芬</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded">羅于翔</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded">楊錦恩</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded">郭治言</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded">楊家綺</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded">林育正</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded">潘玟潔</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded">呂國榮</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded">姜竺均</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded">陳錫瑞</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded">江仕傑</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded">張智勛</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded">郭怡廷</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded">林怡靜</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded">陳億年</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded">張心綺</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded">林佳生</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded">張歆妮</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded">賴品如</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded">陳憶芳</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded">李泰延</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded">林薏雯</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded">蕭有量</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded">許榮懷</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded">李曉玲</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded">歐雅雯</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded">羅浩維</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded">周雅雲</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded">劉思慶</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded">曾翔鈺</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded">陳羿帆</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded">陳俞呈</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded">唐依凡</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded">張雅琪</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded">李婷婷</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded">吳鴻彬</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded">莊培涵</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded">吳苡寧</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded">鄭文杰</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded">吳晏寧</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded">鄭惟心</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded">柯芳穎</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded">陳冠中</span>
+                        </div>
+                    </div>
+                    <!-- 自行開車 -->
+                    <div>
+                        <div class="text-sm text-gray-500 mb-2 border-b pb-1 font-bold">自行開車 (共9人)</div>
+                        <div class="flex flex-wrap gap-2 text-sm mb-4">
+                            <span class="bg-brand-green/10 text-brand-green border border-brand-green/20 px-2 py-1 rounded">廖嘉進</span><span class="bg-brand-green/10 text-brand-green border border-brand-green/20 px-2 py-1 rounded">吳聖泰</span><span class="bg-brand-green/10 text-brand-green border border-brand-green/20 px-2 py-1 rounded">陳裕帆</span><span class="bg-brand-green/10 text-brand-green border border-brand-green/20 px-2 py-1 rounded">林科宏</span><span class="bg-brand-green/10 text-brand-green border border-brand-green/20 px-2 py-1 rounded">陳鴻儀</span><span class="bg-brand-green/10 text-brand-green border border-brand-green/20 px-2 py-1 rounded">林睦宸</span><span class="bg-brand-green/10 text-brand-green border border-brand-green/20 px-2 py-1 rounded">賴威宇</span><span class="bg-brand-green/10 text-brand-green border border-brand-green/20 px-2 py-1 rounded">周佳霈</span><span class="bg-brand-green/10 text-brand-green border border-brand-green/20 px-2 py-1 rounded">李柔儀</span>
+                        </div>
+                        <div class="text-sm text-gray-500 mb-2 border-b pb-1 font-bold">台中自行前往 (共10人)</div>
+                        <div class="flex flex-wrap gap-2 text-sm">
+                            <span class="bg-orange-50 text-orange-700 border border-orange-100 px-2 py-1 rounded">許宗舜</span><span class="bg-orange-50 text-orange-700 border border-orange-100 px-2 py-1 rounded">陳惠婷</span><span class="bg-orange-50 text-orange-700 border border-orange-100 px-2 py-1 rounded">連靜江</span><span class="bg-orange-50 text-orange-700 border border-orange-100 px-2 py-1 rounded">王淦富</span><span class="bg-orange-50 text-orange-700 border border-orange-100 px-2 py-1 rounded">鄭雯文</span><span class="bg-orange-50 text-orange-700 border border-orange-100 px-2 py-1 rounded">王琬喻</span><span class="bg-orange-50 text-orange-700 border border-orange-100 px-2 py-1 rounded">陳洳萱</span><span class="bg-orange-50 text-orange-700 border border-orange-100 px-2 py-1 rounded">吳婉榆</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- B. 晚餐桌次 (表格) -->
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden mb-8">
+                <div class="bg-brand-green text-white px-6 py-4 flex items-center justify-between">
+                    <div class="flex items-center">
+                        <i class="fa-solid fa-utensils mr-3 text-brand-gold text-xl"></i>
+                        <h3 class="font-bold text-lg">10/31 晚餐桌次安排</h3>
+                    </div>
+                    <span class="text-xs bg-brand-gold px-2 py-1 rounded text-white shadow-sm">*素食將另外提供簡餐</span>
+                </div>
+                <div class="overflow-x-auto hide-scrollbar">
+                    <table class="w-full text-sm text-left text-gray-600">
+                        <thead class="text-xs text-gray-500 uppercase bg-gray-50 border-b border-gray-200">
+                            <tr>
+                                <th scope="col" class="px-6 py-4 font-bold whitespace-nowrap w-24">桌次</th>
+                                <th scope="col" class="px-6 py-4 font-bold">同桌成員</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white border-b border-gray-100 hover:bg-gray-50">
+                                <td class="px-6 py-4 font-bold text-gray-900 bg-gray-50/50">第 1 桌</td>
+                                <td class="px-6 py-4 leading-relaxed">林科宏、陳鴻儀、林睦宸、鄭淳芬、吳聖泰、陳裕帆、廖嘉進、羅于翔、蕭有量、李曉玲</td>
+                            </tr>
+                            <tr class="bg-white border-b border-gray-100 hover:bg-gray-50">
+                                <td class="px-6 py-4 font-bold text-gray-900 bg-gray-50/50">第 2 桌</td>
+                                <td class="px-6 py-4 leading-relaxed">潘玟潔、姜竺均、江仕傑、郭怡廷、陳冠中、鄭惟心、郭治言、林育正、莊培涵、鄭文杰</td>
+                            </tr>
+                            <tr class="bg-white border-b border-gray-100 hover:bg-gray-50">
+                                <td class="px-6 py-4 font-bold text-gray-900 bg-gray-50/50">第 3 桌</td>
+                                <td class="px-6 py-4 leading-relaxed">陳羿帆、唐依凡、李婷婷、陳億年、林佳生、張智勛、林怡靜、張心綺、張歆妮、呂國榮</td>
+                            </tr>
+                            <tr class="bg-white border-b border-gray-100 hover:bg-gray-50">
+                                <td class="px-6 py-4 font-bold text-gray-900 bg-gray-50/50">第 4 桌</td>
+                                <td class="px-6 py-4 leading-relaxed">羅浩維、劉思慶、陳憶芳、林慧雯、許榮懷、賴威宇、周佳霈、李柔儀、柯芳穎、<span class="text-brand-green font-bold">陳錫瑞(素)</span>、楊家綺</td>
+                            </tr>
+                            <tr class="bg-white border-b border-gray-100 hover:bg-gray-50">
+                                <td class="px-6 py-4 font-bold text-gray-900 bg-gray-50/50">第 5 桌</td>
+                                <td class="px-6 py-4 leading-relaxed">歐雅雯、周雅雲、曾翔鈺、陳俞呈、張雅琪、吳鴻彬、吳苡寧、吳晏寧、<span class="text-brand-green font-bold">賴品如(素)</span>、李泰延、楊錦恩</td>
+                            </tr>
+                            <tr class="bg-white hover:bg-gray-50">
+                                <td class="px-6 py-4 font-bold text-gray-900 bg-gray-50/50">第 6 桌</td>
+                                <td class="px-6 py-4 leading-relaxed">王淦富、連靜江、許宗舜、陳惠婷、鄭雯文、王琬喻、陳洳萱、吳婉榆、台中、台中</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- C. 住宿分房 (雙併表格) -->
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden mb-8">
+                <div class="bg-brand-green text-white px-6 py-4 flex items-center">
+                    <i class="fa-solid fa-bed mr-3 text-brand-gold text-xl"></i>
+                    <h3 class="font-bold text-lg">房間分配表</h3>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-gray-200">
+                    <!-- 雙人房 -->
+                    <div class="p-0">
+                        <div class="bg-gray-100 text-gray-700 px-4 py-2 font-bold text-sm text-center border-b border-gray-200">雙人房名單</div>
+                        <div class="overflow-x-auto hide-scrollbar">
+                            <table class="w-full text-sm text-left text-gray-600">
+                                <tbody>
+                                    <tr class="border-b border-gray-100 hover:bg-gray-50"><td class="px-4 py-3 font-bold text-brand-green whitespace-nowrap">雙人房湖景1</td><td class="px-4 py-3">鄭淳芬</td></tr>
+                                    <tr class="border-b border-gray-100 hover:bg-gray-50"><td class="px-4 py-3 font-bold text-brand-green whitespace-nowrap">雙人房湖景2</td><td class="px-4 py-3">廖嘉進</td></tr>
+                                    <tr class="border-b border-gray-100 hover:bg-gray-50"><td class="px-4 py-3 font-bold text-brand-green whitespace-nowrap">雙人房湖景3</td><td class="px-4 py-3">楊錦恩、楊家綺</td></tr>
+                                    <tr class="border-b border-gray-100 hover:bg-gray-50"><td class="px-4 py-3 font-bold text-brand-green whitespace-nowrap">雙人房湖景4</td><td class="px-4 py-3">潘玟潔、姜竺均</td></tr>
+                                    <tr class="border-b border-gray-100 hover:bg-gray-50"><td class="px-4 py-3 font-bold text-brand-green whitespace-nowrap">雙人房湖景5</td><td class="px-4 py-3">江仕傑、郭怡廷</td></tr>
+                                    <tr class="border-b border-gray-100 hover:bg-gray-50"><td class="px-4 py-3 font-bold text-brand-green whitespace-nowrap">雙人房湖景6</td><td class="px-4 py-3">陳億年、林佳生</td></tr>
+                                    <tr class="border-b border-gray-100 hover:bg-gray-50"><td class="px-4 py-3 font-bold text-brand-green whitespace-nowrap">雙人房湖景7</td><td class="px-4 py-3">賴品如、李泰延</td></tr>
+                                    <tr class="border-b border-gray-100 hover:bg-gray-50"><td class="px-4 py-3 font-bold text-brand-gold whitespace-nowrap">雙人房山景8</td><td class="px-4 py-3">蕭有量、李曉玲</td></tr>
+                                    <tr class="border-b border-gray-100 hover:bg-gray-50"><td class="px-4 py-3 font-bold text-brand-gold whitespace-nowrap">雙人房山景9</td><td class="px-4 py-3">羅浩維、劉思慶</td></tr>
+                                    <tr class="border-b border-gray-100 hover:bg-gray-50"><td class="px-4 py-3 font-bold text-brand-gold whitespace-nowrap">雙人房山景10</td><td class="px-4 py-3">台中、台中</td></tr>
+                                    <tr class="border-b border-gray-100 hover:bg-gray-50"><td class="px-4 py-3 font-bold text-brand-gold whitespace-nowrap">雙人房山景11</td><td class="px-4 py-3">許宗舜、陳惠婷</td></tr>
+                                    <tr class="hover:bg-gray-50"><td class="px-4 py-3 font-bold text-brand-green whitespace-nowrap">雙人房湖景12</td><td class="px-4 py-3">連靜江、王淦富</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- 四人房 -->
+                    <div class="p-0">
+                        <div class="bg-gray-100 text-gray-700 px-4 py-2 font-bold text-sm text-center border-b border-gray-200">四人房名單</div>
+                        <div class="overflow-x-auto hide-scrollbar">
+                            <table class="w-full text-sm text-left text-gray-600">
+                                <tbody>
+                                    <tr class="border-b border-gray-100 hover:bg-gray-50"><td class="px-4 py-3 font-bold text-brand-green whitespace-nowrap">四人房湖景1</td><td class="px-4 py-3">吳聖泰、陳裕帆</td></tr>
+                                    <tr class="border-b border-gray-100 hover:bg-gray-50"><td class="px-4 py-3 font-bold text-brand-green whitespace-nowrap">四人房湖景2</td><td class="px-4 py-3">林科宏、陳鴻儀、林睦宸</td></tr>
+                                    <tr class="border-b border-gray-100 hover:bg-gray-50"><td class="px-4 py-3 font-bold text-brand-green whitespace-nowrap">四人房湖景3</td><td class="px-4 py-3">陳羿帆、唐依凡、李婷婷</td></tr>
+                                    <tr class="border-b border-gray-100 hover:bg-gray-50"><td class="px-4 py-3 font-bold text-brand-green whitespace-nowrap">四人房湖景4</td><td class="px-4 py-3">莊培涵、鄭文杰、鄭惟心、陳冠中</td></tr>
+                                    <tr class="border-b border-gray-100 hover:bg-gray-50"><td class="px-4 py-3 font-bold text-brand-gold whitespace-nowrap">四人房山景5</td><td class="px-4 py-3">羅于翔、郭治言、林育正、呂國榮</td></tr>
+                                    <tr class="border-b border-gray-100 hover:bg-gray-50"><td class="px-4 py-3 font-bold text-brand-gold whitespace-nowrap">四人房山景6</td><td class="px-4 py-3">陳錫瑞、張智勛、林怡靜、張心綺</td></tr>
+                                    <tr class="border-b border-gray-100 hover:bg-gray-50"><td class="px-4 py-3 font-bold text-brand-green whitespace-nowrap">四人房湖景7</td><td class="px-4 py-3">張歆妮、陳憶芳、林薏雯、許榮懷</td></tr>
+                                    <tr class="border-b border-gray-100 hover:bg-gray-50"><td class="px-4 py-3 font-bold text-brand-green whitespace-nowrap">四人房湖景8</td><td class="px-4 py-3">歐雅雯、周雅雲、曾翔鈺、陳俞呈</td></tr>
+                                    <tr class="border-b border-gray-100 hover:bg-gray-50"><td class="px-4 py-3 font-bold text-brand-green whitespace-nowrap">四人房湖景9</td><td class="px-4 py-3">張雅琪、吳鴻彬、吳苡寧、吳晏寧</td></tr>
+                                    <tr class="border-b border-gray-100 hover:bg-gray-50"><td class="px-4 py-3 font-bold text-brand-green whitespace-nowrap">四人房湖景10</td><td class="px-4 py-3">賴威宇、周佳霈、李柔儀、柯芳穎</td></tr>
+                                    <tr class="hover:bg-gray-50"><td class="px-4 py-3 font-bold text-brand-gold whitespace-nowrap">四人房山景11</td><td class="px-4 py-3">鄭雯文、王琬喻、陳洳萱、吳婉榆</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- D. 第二天午餐指南 (碼啡館) -->
+            <div class="mt-8 bg-white rounded-2xl p-6 md:p-8 shadow-md border-t-4 border-brand-green">
+                <h3 class="text-2xl font-bold text-gray-800 mb-4 border-b pb-4 flex items-center">
+                    <i class="fa-solid fa-utensils mr-3 text-brand-gold text-2xl"></i> 第二天午餐 - 自行前往碼啡館
+                </h3>
+                
+                <!-- 地點與資訊區塊 -->
+                <div class="bg-orange-50 border border-brand-gold/30 rounded-lg mb-6 overflow-hidden">
+                    <div class="px-4 py-3 border-b border-brand-gold/20 flex items-start bg-orange-100/50">
+                        <i class="fa-solid fa-location-dot mt-1 mr-3 text-brand-green text-lg"></i>
+                        <div>
+                            <strong class="text-brand-green block mb-1">碼啡館地址：</strong>
+                            <p class="text-gray-700 font-bold">南投縣魚池鄉水社村名勝街11號B1樓 <span class="text-gray-500 font-normal">（碼頭水沙連大飯店內）</span></p>
+                        </div>
+                    </div>
+                    <div class="px-4 py-3 flex items-start text-brand-gold font-bold">
+                        <i class="fa-solid fa-circle-info mt-1 mr-3 text-lg"></i>
+                        <p>沒有參加賽事及報名 6K，請 12:00 抵達餐廳用餐（將事先點餐）。</p>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                    <div>
+                        <h4 class="font-bold text-brand-green mb-3"><i class="fa-solid fa-map-location-dot mr-2"></i> 步行路線圖 (約 9 分鐘)</h4>
+                        <img src="./image_a9ef21.png" alt="碼啡館步行路線圖" class="w-full h-auto rounded-lg shadow-sm border border-gray-200 cursor-pointer hover:opacity-90 transition" onclick="openImageModal(this.src)">
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-brand-green mb-3"><i class="fa-solid fa-book-open mr-2"></i> 碼啡館菜單</h4>
+                        <img src="./menu.jpg" alt="碼啡館菜單" class="w-full h-auto rounded-lg shadow-sm border border-gray-200 bg-gray-100 object-contain min-h-[200px] cursor-pointer hover:opacity-90 transition" onclick="openImageModal(this.src)">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 6. Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8">
+        <div class="container mx-auto px-4 md:px-6 text-center">
+            <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-gray-500 mx-auto mb-4 text-xl">
+                <i class="fa-solid fa-running"></i>
+            </div>
+            <p class="text-sm mb-2">中國信託台北路跑健走社｜CTBC RC</p>
+            <p class="text-xs text-gray-600">&copy; 2026 CTBC RC. All Rights Reserved. 本網頁為內部活動公告專用。</p>
+        </div>
+    </footer>
+
+    <!-- 全螢幕圖片放大 Modal -->
+    <div id="imageModal" class="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4 backdrop-blur-sm cursor-pointer" onclick="closeImageModal()">
+        <button class="absolute top-4 right-4 md:top-8 md:right-8 text-white hover:text-gray-300 transition text-4xl w-12 h-12 flex items-center justify-center focus:outline-none z-[110]" title="關閉">
+            &times;
+        </button>
+        <img id="modalImage" src="" alt="Enlarged Image" class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl" onclick="event.stopPropagation()">
+    </div>
+
+    <!-- JS for Image Modal -->
+    <script>
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+
+        function openImageModal(imgSrc) {
+            modalImg.src = imgSrc;
+            modal.classList.add('show');
+            setTimeout(() => {
+                modalImg.classList.add('scale-up');
+            }, 10);
+        }
+
+        function closeImageModal() {
+            modalImg.classList.remove('scale-up');
+            setTimeout(() => {
+                modal.classList.remove('show');
+            }, 200);
+        }
+
+        // 監聽 ESC 鍵關閉
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape" && modal.classList.contains('show')) {
+                closeImageModal();
+            }
+        });
+    </script>
+</body>
+</html>
