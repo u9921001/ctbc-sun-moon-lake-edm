@@ -197,7 +197,6 @@
                                     <i class="fa-solid fa-suitcase-rolling mr-1"></i>請將行李寄放給飯店
                                 </span>
                             </div>
-                            <!-- 新增退房時間補充說明 -->
                             <div class="text-gray-700 mt-2 text-sm bg-yellow-100 p-2.5 rounded-lg border border-yellow-300 inline-block font-medium">
                                 <i class="fa-solid fa-circle-info text-brand-gold mr-1"></i>所有房間皆延長退房時間一小時，請配合於中午 12 點前完成退房手續。
                             </div>
@@ -221,12 +220,17 @@
                 </div>
             </div>
 
-            <!-- LINE 群組公告提醒 -->
-            <div class="mt-8 mx-auto bg-[#00B900]/10 border-2 border-[#00B900]/30 rounded-xl p-5 text-center shadow-sm">
-                <p class="text-[#00B900] font-bold md:text-lg flex flex-col md:flex-row items-center justify-center">
-                    <i class="fa-brands fa-line text-3xl md:text-2xl mb-2 md:mb-0 md:mr-3"></i> 
-                    若行程有任何變動，將第一時間於 LINE 群組公告，敬請密切留意。
-                </p>
+            <!-- LINE 群組公告提醒 (含 QR Code 與連結) -->
+            <div class="mt-8 mx-auto bg-[#00B900]/10 border-2 border-[#00B900]/30 rounded-xl p-6 shadow-sm max-w-3xl hover:bg-[#00B900]/20 transition duration-300 cursor-pointer" onclick="window.open('https://line.me/R/ti/g/xNnDFLRbdg', '_blank')">
+                <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+                    <img src="./1311118.jpg" alt="LINE Group QR Code" class="w-28 h-28 object-cover rounded shadow-sm border border-white">
+                    <div class="text-center md:text-left">
+                        <p class="text-[#00B900] font-bold text-xl flex items-center justify-center md:justify-start mb-2">
+                            <i class="fa-brands fa-line text-3xl mr-2"></i> 敬請加入活動官方 LINE 群組
+                        </p>
+                        <p class="text-gray-700 text-sm md:text-base font-medium">若行程有任何變動，將第一時間於 LINE 群組公告，敬請密切留意。<br><span class="text-brand-green underline mt-1 inline-block">點擊此處加入群組</span></p>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -339,8 +343,39 @@
                 </div>
             </div>
 
+            <!-- 新增：參賽人員名單 -->
+            <div class="mt-10 mb-8 bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-brand-green max-w-4xl mx-auto">
+                <h3 class="text-2xl font-bold text-brand-green mb-6 border-b pb-3 flex items-center">
+                    <i class="fa-solid fa-users mr-3 text-brand-gold text-xl"></i> 參賽人員名單
+                </h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- 29K 名單 -->
+                    <div>
+                        <div class="bg-gray-100 px-4 py-2 rounded-t-lg font-bold text-gray-800 border-b-2 border-brand-gold flex justify-between items-center">
+                            <span>29K 參賽人員</span>
+                            <span class="bg-brand-gold text-white text-xs px-2 py-1 rounded-full">共 29 位</span>
+                        </div>
+                        <div class="border border-t-0 border-gray-200 rounded-b-lg p-4 bg-gray-50 flex flex-wrap gap-2 text-sm">
+                            <span class="bg-white border border-gray-300 px-2 py-1 rounded">鄭淳芬</span><span class="bg-white border border-gray-300 px-2 py-1 rounded">楊錦恩</span><span class="bg-white border border-gray-300 px-2 py-1 rounded">楊家綺</span><span class="bg-white border border-gray-300 px-2 py-1 rounded">潘玟潔</span><span class="bg-white border border-gray-300 px-2 py-1 rounded">姜竺均</span><span class="bg-white border border-gray-300 px-2 py-1 rounded">江仕傑</span><span class="bg-white border border-gray-300 px-2 py-1 rounded">陳億年</span><span class="bg-white border border-gray-300 px-2 py-1 rounded">蕭有量</span><span class="bg-white border border-gray-300 px-2 py-1 rounded">王淦富</span><span class="bg-white border border-gray-300 px-2 py-1 rounded">吳聖泰</span><span class="bg-white border border-gray-300 px-2 py-1 rounded">陳裕帆</span><span class="bg-white border border-gray-300 px-2 py-1 rounded">林科宏</span><span class="bg-white border border-gray-300 px-2 py-1 rounded">莊培涵</span><span class="bg-white border border-gray-300 px-2 py-1 rounded">鄭文杰</span><span class="bg-white border border-gray-300 px-2 py-1 rounded">陳冠中</span><span class="bg-white border border-gray-300 px-2 py-1 rounded">羅于翔</span><span class="bg-white border border-gray-300 px-2 py-1 rounded">郭治言</span><span class="bg-white border border-gray-300 px-2 py-1 rounded">林育正</span><span class="bg-white border border-gray-300 px-2 py-1 rounded">呂國榮</span><span class="bg-white border border-gray-300 px-2 py-1 rounded">張智勛</span><span class="bg-white border border-gray-300 px-2 py-1 rounded">林怡靜</span><span class="bg-white border border-gray-300 px-2 py-1 rounded">陳憶芳</span><span class="bg-white border border-gray-300 px-2 py-1 rounded">林薏雯</span><span class="bg-white border border-gray-300 px-2 py-1 rounded">許榮懷</span><span class="bg-white border border-gray-300 px-2 py-1 rounded">張雅琪</span><span class="bg-white border border-gray-300 px-2 py-1 rounded">吳鴻彬</span><span class="bg-white border border-gray-300 px-2 py-1 rounded">賴威宇</span><span class="bg-white border border-gray-300 px-2 py-1 rounded">李柔儀</span><span class="bg-white border border-gray-300 px-2 py-1 rounded">柯芳穎</span>
+                        </div>
+                    </div>
+                    
+                    <!-- 6K 名單 -->
+                    <div>
+                        <div class="bg-gray-100 px-4 py-2 rounded-t-lg font-bold text-gray-800 border-b-2 border-brand-green flex justify-between items-center">
+                            <span>6K 參賽人員</span>
+                            <span class="bg-brand-green text-white text-xs px-2 py-1 rounded-full">共 13 位</span>
+                        </div>
+                        <div class="border border-t-0 border-gray-200 rounded-b-lg p-4 bg-gray-50 flex flex-wrap gap-2 text-sm">
+                            <span class="bg-white border border-gray-300 px-2 py-1 rounded">廖嘉進</span><span class="bg-white border border-gray-300 px-2 py-1 rounded">郭怡廷</span><span class="bg-white border border-gray-300 px-2 py-1 rounded">林佳生</span><span class="bg-white border border-gray-300 px-2 py-1 rounded">李曉玲</span><span class="bg-white border border-gray-300 px-2 py-1 rounded">羅浩維</span><span class="bg-white border border-gray-300 px-2 py-1 rounded">唐依凡</span><span class="bg-white border border-gray-300 px-2 py-1 rounded">李婷婷</span><span class="bg-white border border-gray-300 px-2 py-1 rounded">鄭惟心</span><span class="bg-white border border-gray-300 px-2 py-1 rounded">歐雅雯</span><span class="bg-white border border-gray-300 px-2 py-1 rounded">周雅雲</span><span class="bg-white border border-gray-300 px-2 py-1 rounded">曾翔鈺</span><span class="bg-white border border-gray-300 px-2 py-1 rounded">陳俞呈</span><span class="bg-white border border-gray-300 px-2 py-1 rounded">周佳霈</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- 29K 完賽配速對照表 -->
-            <div class="mt-10 bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100 max-w-3xl mx-auto">
+            <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100 max-w-3xl mx-auto">
                 <h3 class="text-xl font-bold text-brand-green mb-6 border-b border-gray-100 pb-3 flex items-center justify-center">
                     <i class="fa-solid fa-person-running text-brand-gold mr-2 text-xl"></i> 29K 完賽配速對照表
                 </h3>
@@ -379,7 +414,7 @@
     <section id="lists" class="py-16 bg-white">
         <div class="container mx-auto px-4 md:px-6 max-w-6xl">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-brand-green mb-3">乘車、用餐與住宿安排資訊</h2>
+                <h2 class="text-3xl font-bold text-brand-green mb-3">安排資訊</h2>
                 <p class="text-gray-500">分組名單總覽</p>
             </div>
 
@@ -544,9 +579,15 @@
                             <p class="text-gray-700 font-bold">南投縣魚池鄉水社村名勝街11號B1樓 <span class="text-gray-500 font-normal">（碼頭水沙連大飯店內）</span></p>
                         </div>
                     </div>
-                    <div class="px-4 py-3 flex items-start text-brand-gold font-bold">
-                        <i class="fa-solid fa-circle-info mt-1 mr-3 text-lg"></i>
-                        <p>沒有參加賽事及報名 6K，請 12:00 抵達餐廳用餐（將事先點餐）。</p>
+                    <!-- 點餐問卷說明與按鈕 -->
+                    <div class="px-4 py-4 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                        <div class="flex items-start text-brand-gold font-bold">
+                            <i class="fa-solid fa-circle-info mt-1 mr-3 text-lg"></i>
+                            <p class="leading-relaxed">因參與人數較多，為了避免現場久候餐點，未安排賽事行程及僅報名 6K 項目人員，請於 12:00 準時抵達餐廳用餐。由於餐廳需要事先點餐，請大家確認菜單並提早填單喔！</p>
+                        </div>
+                        <a href="https://forms.gle/2zmzmpk47wraGcuV8" target="_blank" class="shrink-0 bg-brand-gold hover:bg-brand-goldhover text-white px-6 py-2.5 rounded-full font-bold shadow-md transition-all transform hover:scale-105 flex items-center justify-center">
+                            <i class="fa-solid fa-pen-to-square mr-2"></i> 前往填寫點餐問卷
+                        </a>
                     </div>
                 </div>
                 
